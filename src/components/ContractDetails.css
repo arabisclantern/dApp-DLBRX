@@ -1,0 +1,32 @@
+.contract-details-container {
+    font-size: 1rem;
+    color: #0056b3; /* Darker blue for better contrast */
+}
+
+.highlight-text {
+    color: #cc5500; /* Darker orange for better contrast */
+}
+
+.bnb-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.bnb-price-number {
+    color: #ff10c7; /* Darker yellow for better contrast */
+    font-weight: bold;
+    text-shadow: 0 0 10px #e4eceb, 0 0 20px #dbc1d8; /* Adjusted shadow color */
+}
+
+/* Clickable Contract Address Styling */
+.contract-link {
+    display: inline-block;
+    color: #0000db; /* Darker blue for better contrast */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contract-link:hover {
+    color: #b52eb1; /* Even darker blue for hover state */
+    text-decoration: underline;
+}

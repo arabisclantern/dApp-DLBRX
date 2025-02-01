@@ -1,0 +1,134 @@
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(45deg, #6ac312, #351e9e, #B0B0B0); /* Metallic silver gradient */
+  color: #fff;
+  height: 100%;
+}
+
+/* WalletConnect Box */
+.walletconnect-box {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(45deg, #d8decb, #c5b7d8, #e3cccc); /* Metallic silver gradient */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* WalletConnect Logo */
+.walletconnect-logo {
+  width: 60px;  /* Larger logo */
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+/* WalletConnect Text */
+.walletconnect-text {
+  font-size: 40px;  /* Increased font size for more impact */
+  font-weight: bold;
+  color: red;       /* Red color */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* WalletConnect Button */
+.walletconnect-btn {
+  padding: 14px 24px;
+  background-color: #FFD700;  /* Golden color */
+  border: none;
+  color: rgb(89, 92, 199);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.walletconnect-btn:hover {
+  background-color: #ffcc00;
+  transform: translateY(-2px);  /* Adds a slight hover effect */
+}
+
+.walletconnect-btn:active {
+  transform: translateY(2px);  /* Adds a click effect */
+}
+
+/* Styles for the QR Code Display */
+.walletconnect-qr-code {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Title and Subtext for WalletConnect Box */
+.walletconnect-box .title {
+  font-size: 38px;  /* Slightly adjusted size */
+  color: red;       /* Red color */
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.walletconnect-box .subtext {
+  font-size: 20px;  /* Increased size for readability */
+  color: red;       /* Red color */
+  font-style: italic;
+  margin-top: 10px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+/* Media Query to make it responsive */
+@media (max-width: 768px) {
+  .walletconnect-text {
+    font-size: 32px;  /* Adjusted size for smaller screens */
+  }
+
+  .walletconnect-btn {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  .walletconnect-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .walletconnect-box {
+    padding: 30px;
+  }
+
+  .walletconnect-box .title {
+    font-size: 32px;  /* Adjusted for smaller screens */
+  }
+
+  .walletconnect-box .subtext {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .walletconnect-text {
+    font-size: 28px;  /* Even smaller text for very small screens */
+  }
+
+  .walletconnect-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .walletconnect-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .walletconnect-box {
+    padding: 20px;
+  }
+}

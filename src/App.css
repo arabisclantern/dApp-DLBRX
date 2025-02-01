@@ -1,0 +1,542 @@
+.App {
+  background-color: #871818; /* Light gray */
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* App-header - Ensure content is centered */
+body {
+  background-color: #6045c2; /* Silver background color */
+  font-family: Arial, sans-serif;
+  color: #333; /* Text color */
+  margin: 0;
+  padding: 0;
+}
+.App-logo {
+  height: 7em;
+  width: 7em;
+  background-color: #f5f0f3b5;
+  border-radius: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+.App-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.App-header {
+  padding: 20px;
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Ensure .pp-container is centered inside App-header */
+.pp-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #f8f8f8, #012034);
+  border-radius: 15px;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 800px;
+  margin: 0;
+}
+
+/* Optional: Centering for .address-login-container */
+.address-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .pp-container {
+    padding: 20px;
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .central-zone {
+    gap: 10px;
+  }
+
+  /* Make buttons more mobile-friendly */
+  .wallet-address-input input,
+  .wallet-address-input button,
+  .claim-airdrop-btn-wrapper button {
+    width: 80%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .magic-login input,
+  .magic-login-btn,
+  .login-complete button,
+  .send-btn,
+  .prompt-message button {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  .address-input {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .address-login-btn {
+    width: 80%;
+    font-size: 18px;
+    padding: 14px 28px;
+  }
+
+  .App-title {
+    font-size: 3em;
+    margin: 10px 0;
+  }
+
+  .App-symbol {
+    font-size: 4em;
+    margin: 15px 0;
+  }
+
+  .address-login {
+    padding: 30px;
+    width: 90%;
+  }
+}
+
+/* Additional styling for smaller devices */
+@media (max-width: 480px) {
+  .App-logo {
+    height: 4em;
+    width: 4em;
+  }
+
+  .wallet-address-input input,
+  .wallet-address-input button,
+  .claim-airdrop-btn-wrapper button {
+    width: 90%;
+  }
+
+  .magic-login input,
+  .magic-login-btn,
+  .login-complete button,
+  .send-btn,
+  .prompt-message button {
+    width: 90%;
+  }
+
+  .address-input {
+    padding: 10px;
+  }
+
+  .address-login-btn {
+    width: 90%;
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  .App-title {
+    font-size: 2.5em;
+  }
+
+  .App-symbol {
+    font-size: 3em;
+  }
+}
+
+/* Global Styles */
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.App {
+  text-align: center;
+  background: linear-gradient(45deg, #D0E8F2, #A1C6EA);
+}
+
+.App-logo {
+  height: 7em;
+  width: 7em;
+  background-color: #f5f0f3b5;
+  border-radius: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+.App-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Continue with other styles as needed... */
+
+
+/* Center section for Connect Wallet and Claim Airdrop */
+.central-zone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.wallet-address-input input,
+.wallet-address-input button,
+.claim-airdrop-btn-wrapper button {
+  padding: 18px 30px;
+  border-radius: 8px;
+  margin: 10px 0;
+  width: 20%;
+  font-size: 18px;
+}
+
+/* Connect Wallet Input Style */
+.wallet-address-input input {
+  border: 2px solid #3498db;
+}
+
+.wallet-address-input button {
+  background-color: #32CD32;
+  border: none;
+  color: rgb(154, 145, 222);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.wallet-address-input button:hover {
+  background-color: #228B22;
+}
+
+/* Claim Airdrop Button Style */
+.claim-airdrop-btn-wrapper button {
+  background-color: #FFD700;
+  border: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.claim-airdrop-btn-wrapper button:hover {
+  background-color: #ffcc00;
+}
+
+/* Toastify Custom CSS */
+.Toastify__toast--green {
+  background-color: #32CD32;
+  color: white;
+}
+
+/* Magic Wallet Login Form */
+.magic-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #f8f8f8;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.magic-login input {
+  padding: 15px;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  width: 80%;
+  color: #333;
+  background-color: #f0f8ff;
+}
+
+.magic-login-btn {
+  padding: 15px 30px;
+  background-color: #3498db;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.magic-login-btn:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+.magic-login-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Login Success Message */
+.login-complete {
+  background-color: #f8f8f8;
+  color: #32CD32;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.login-complete button {
+  background-color: #32CD32;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  color: rgb(185, 177, 242);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-complete button:hover {
+  background-color: #228B22;
+}
+
+/* Send Button */
+.send-btn {
+  padding: 15px 30px;
+  background-color: #FFD700;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.send-btn:hover {
+  background-color: #ffcc00;
+}
+
+/* Prompt Message */
+.prompt-message {
+  background-color: #f8f8f8;
+  color: #333;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.prompt-message button {
+  background-color: #32CD32;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.prompt-message button:hover {
+  background-color: #228B22;
+}
+
+/* WalletConnect Logo as Icon */
+.walletconnect-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Parent Container: Ensures Centering */
+.address-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Ensure full width of the page and no margin */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Centered Box */
+.address-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px; /* Better spacing */
+  background: linear-gradient(135deg, #e3ead4cb, #b1d3df); /* Soft gradient */
+  border-radius: 15px;
+  width: 600px;  /* Increased width */
+  box-shadow: 0px 10px 25px rgba(67, 46, 163, 0.495);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.address-login:hover {
+  transform: scale(1.02); /* Subtle hover effect */
+}
+
+/* Input Field */
+.address-input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 2px solid #3498db;
+  font-size: 18px;
+  background-color: #f0f8ff;
+  color: #333;
+  box-shadow: inset 0px 3px 8px rgba(121, 110, 128, 0.292);
+}
+
+/* Button */
+.address-login-btn {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+
+.address-login-btn:hover {
+  background: linear-gradient(135deg, #2980b9, #1e70bf);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+.App-title {
+  font-size: 5em;  /* Slightly smaller for a better balance */
+  color: #FFD700;  /* Gold color for emphasis */
+  margin: 0;
+  font-weight: bold;  /* Bold font to make it stand out */
+  text-transform: uppercase;  /* Uppercase for a clean look */
+  letter-spacing: 3px;  /* Adds some spacing between letters for clarity */
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);  /* Subtle shadow for depth */
+  animation: bounce 4s infinite;  /* Bounce animation like the symbol */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Initial shadow position */
+  }
+  25% {
+    transform: translateY(-5px);  /* Moving up */
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6); /* Shadow moves slightly */
+  }
+  50% {
+    transform: translateY(-10px);  /* Moving further up */
+    text-shadow: 6px 6px 16px rgba(0, 0, 0, 0.7); /* Shadow moves further */
+  }
+  75% {
+    transform: translateY(-5px);  /* Moving back down */
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6); /* Shadow comes back slightly */
+  }
+}
+
+.App-symbol {
+  font-size: 6em;           /* Increase size for prominence */
+  color: #FFD700;           /* Gold color for high contrast */
+  font-weight: bold;        /* Make it bold */
+  text-transform: uppercase;/* Ensure the text is in uppercase */
+  letter-spacing: 5px;      /* Add spacing between letters for a stylish look */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Initial shadow effect */
+  margin: 20px 0;           /* Ensure some margin for spacing */
+  font-family: 'Roboto', sans-serif; /* A modern, clean font */
+  animation: bounce 4s infinite; /* Bounce animation */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Initial shadow position */
+  }
+  25% {
+    transform: translateY(-5px);  /* Moving up */
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6); /* Shadow moves slightly */
+  }
+  50% {
+    transform: translateY(-10px);  /* Moving further up */
+    text-shadow: 6px 6px 16px rgba(0, 0, 0, 0.7); /* Shadow moves further */
+  }
+  75% {
+    transform: translateY(-5px);  /* Moving back down */
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6); /* Shadow comes back slightly */
+  }
+}
+.supply-info {
+  font-size: 0.9rem;
+  color: #130479;
+  margin-top: 10px;
+  line-height: 1.5;
+  transition: color 0.3s ease-in-out;
+}
+
+.supply-info:hover,
+.supply-info:active {
+  color: #028ba9; /* Change to a friendly blue when touched or hovered */
+}
+
+/* Make sure the container is responsive */
+@media (max-width: 600px) {
+  .pp-container {
+    width: 100%;
+    padding: 20px;
+  }
+}
+/* styles.css */
+
+@keyframes softMotion {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+  
+  
+}
